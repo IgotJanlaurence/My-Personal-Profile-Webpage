@@ -1,4 +1,11 @@
-<title>Contact Me</title>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Me</title>
 
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -12,151 +19,125 @@
 
 <body>
 
-<h1>Contact Me</h1>
+    <h1>Contact Me</h1>
 
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About Me</a> |
-    <a href="hobbies.html">Hobbies</a> |
-    <a href="favorites.html">Favorites</a> |
-    <a href="goals.html">Goals</a> |
-    <a href="contact.html">Contact Me</a>
-</nav>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About Me</a> |
+        <a href="hobbies.html">Hobbies</a> |
+        <a href="favorites.html">Favorites</a> |
+        <a href="goals.html">Goals</a> |
+        <a href="contact.html">Contact Me</a>
+    </nav>
 
-<hr>
+    <hr>
 
-<form id="contact-form">
+    <form id="contact-form">
 
-    <!-- Full Name -->
-    <label>Full Name:</label>
-    <input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        required
-    >
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name"
+               placeholder="Enter your name" required>
 
-    <br><br>
+        <br><br>
 
-    <!-- Email -->
-    <label>Email:</label>
-    <input
-        type="email"
-        name="email"
-        placeholder="Your Email"
-        required
-    >
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"
+               placeholder="Enter your email" required>
 
-    <br><br>
+        <br><br>
 
-    <!-- Gender -->
-    <label>Gender:</label>
-    <br>
+        <label>Gender:</label>
+        <br>
 
-    <input type="radio" name="gender" value="Male">
-    Male
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
 
-    <input type="radio" name="gender" value="Female">
-    Female
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
 
-    <input type="radio" name="gender" value="Gay">
-    Gay
+        <input type="radio" id="gay" name="gender" value="Gay">
+        <label for="gay">Gay</label>
 
-    <input type="radio" name="gender" value="Lesbian">
-    Lesbian
+        <input type="radio" id="lesbian" name="gender" value="Lesbian">
+        <label for="lesbian">Lesbian</label>
 
-    <input type="radio" name="gender" value="Other">
-    Other
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label>
 
-    <br><br>
+        <br><br>
 
-    <!-- Skills -->
-    <label>Skills:</label>
-    <br>
+        <label>Skills:</label>
+        <br>
 
-    <input type="checkbox" name="skills" value="HTML">
-    HTML
+        <input type="checkbox" id="html" name="skills" value="HTML">
+        <label for="html">HTML</label>
 
-    <input type="checkbox" name="skills" value="CSS">
-    CSS
+        <input type="checkbox" id="css" name="skills" value="CSS">
+        <label for="css">CSS</label>
 
-    <input type="checkbox" name="skills" value="JavaScript">
-    JavaScript
+        <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+        <label for="javascript">JavaScript</label>
 
-    <br><br>
+        <br><br>
 
-    <!-- Strand -->
-    <label>Strand:</label>
+        <label for="strand">Strand:</label>
 
-    <select name="strand">
-        <option value="ICT">ICT</option>
-        <option value="STEM">STEM</option>
-        <option value="ABM">ABM</option>
-        <option value="GAS">GAS</option>
-        <option value="HUMSS">HUMSS</option>
-    </select>
+        <select id="strand" name="strand">
+            <option value="ICT">ICT</option>
+            <option value="STEM">STEM</option>
+            <option value="ABM">ABM</option>
+            <option value="GAS">GAS</option>
+            <option value="HUMSS">HUMSS</option>
+        </select>
 
-    <br><br>
+        <br><br>
 
-    <!-- Message -->
-    <label>Message:</label>
-    <br>
+        <label for="message">Message:</label>
+        <br>
 
-    <textarea
-        name="message"
-        rows="5"
-        cols="50"
-        placeholder="Type your message here..."
-        required
-    ></textarea>
+        <textarea
+            id="message"
+            name="message"
+            rows="5"
+            cols="50"
+            placeholder="Type your message here..."
+            required></textarea>
 
-    <br><br>
+        <br><br>
 
-    <!-- Buttons -->
-    <input
-        type="submit"
-        value="Send Message"
-    >
+        <button type="submit">Send Message</button>
+        <button type="reset">Clear Form</button>
 
-    <input
-        type="reset"
-        value="Clear Form"
-    >
+    </form>
 
-</form>
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
 
+            event.preventDefault();
 
-<!-- EmailJS Sending Script -->
-<script>
+            emailjs.sendForm(
+                "service_pjh0uuc",
+                "template_hwwchig",
+                this
+            )
+            .then(function() {
 
-document
-    .getElementById("contact-form")
-    .addEventListener("submit", function(event) 
+                alert("Message sent successfully!");
 
-        event.preventDefault();
+                document.getElementById("contact-form").reset();
 
-        emailjs.sendForm(
-            "service_pjh0uuc",
-            "template_hwwchig",
-            this
-        
+            })
+            .catch(function(error) {
 
-        .then(function() 
+                alert("Message failed to send. Please try again.");
 
-            alert("Message sent successfully!");
+                console.error("EmailJS Error:", error);
 
-            document
-                .getElementById("contact-form")
-                .reset();        
+            });
 
-        .catch(function(error) 
-
-            alert("Failed to send message. Please try again.");
-
-            console.log(error);
-           
-
-</script>
+        });
+    </script>
 
 </body>
+
 </html>
