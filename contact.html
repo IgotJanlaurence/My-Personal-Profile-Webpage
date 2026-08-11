@@ -27,130 +27,6 @@
 
 <form id="contact-form">
 
-    <label>Full Name:</label>
-    <input type="text" name="name" placeholder="Your Name" required>
-
-    <br><br>
-
-    <label>Email:</label>
-    <input type="email" name="email" placeholder="Your Email" required>
-
-    <br><br>
-
-    <label>Gender:</label>
-    <input type="radio" name="gender" value="Male">
-    Male
-
-    <input type="radio" name="gender" value="Female">
-    Female
-
-    <br><br>
-
-    <label>Skills:</label>
-    <input type="checkbox" name="skills" value="HTML"> HTML
-    <input type="checkbox" name="skills" value="CSS"> CSS
-    <input type="checkbox" name="skills" value="JavaScript"> JavaScript
-
-    <br><br>
-
-    <label>Strand:</label>
-    <select name="strand">
-        <option value="ICT">ICT</option>
-        <option value="STEM">STEM</option>
-        <option value="ABM">ABM</option>
-        <option value="GAS">GAS</option>
-        <option value="HUMSS">HUMSS</option> 
-    </select>
-
-    <br><br>
-
-    <label>Message:</label>
-    <br>
-
-    <textarea
-        name="message"
-        rows="5"
-        cols="50"
-        placeholder="Type your message here..."
-        required
-    ></textarea>
-
-    <br><br>
-
-    <input type="submit" value="Send Message">
-    <input type="reset" value="Clear Form">
-
-</form>
-
-
-<script>
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-
-    event.preventDefault();
-
-    emailjs.sendForm(
-        "service_pjh0uuc"
-        "template_hwwchig"
-        this
-    
-    .then(function() {
-
-        alert("Message sent successfully!");
-
-        document.getElementById("contact-form").reset();
-
-    })
-    .catch(function(error) {
-
-        alert("Failed to send message. Please try again.");
-
-        console.log(error);
-
-    });
-
-});
-</script>
-
-</body>
-</html>
-
-cdn.jsdelivr.net
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Contact Me</title>
-
-    <!-- EmailJS -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-    <script>
-        emailjs.init({
-            publicKey: "d2qtMLP2W8dQh0WOk"
-        });
-    </script>
-</head>
-
-<body>
-
-<h1>Contact Me</h1>
-
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About Me</a> |
-    <a href="hobbies.html">Hobbies</a> |
-    <a href="favorites.html">Favorites</a> |
-    <a href="goals.html">Goals</a> |
-    <a href="contact.html">Contact Me</a>
-</nav>
-
-<hr>
-
-<form id="contact-form">
-
     <!-- Full Name -->
     <label>Full Name:</label>
     <input
@@ -255,7 +131,7 @@ cdn.jsdelivr.net
 
 document
     .getElementById("contact-form")
-    .addEventListener("submit", function(event) {
+    .addEventListener("submit", function(event) 
 
         event.preventDefault();
 
@@ -263,33 +139,24 @@ document
             "service_pjh0uuc",
             "template_hwwchig",
             this
-        )
+        
 
-        .then(function() {
+        .then(function() 
 
             alert("Message sent successfully!");
 
             document
                 .getElementById("contact-form")
-                .reset();
+                .reset();        
 
-        })
-
-        .catch(function(error) {
+        .catch(function(error) 
 
             alert("Failed to send message. Please try again.");
 
             console.log(error);
-
-        });
-
-    });
+           
 
 </script>
 
 </body>
 </html>
-
-
-
-  
