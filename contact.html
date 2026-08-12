@@ -1,4 +1,4 @@
-   <!DOCTYPE html>
+            <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,351 +15,103 @@
             publicKey: "d2qtMLP2W8dQh0WOk"
         });
     </script>
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            min-height: 100vh;
-            background: #f5f7fa;
-            color: #1f2937;
-            padding: 30px 40px;
-        }
-
-        /* Header */
-        header {
-            margin-bottom: 25px;
-        }
-
-        header h1 {
-            font-size: 32px;
-            margin-bottom: 15px;
-            color: #1f2937;
-        }
-
-        /* Navigation */
-        nav {
-            margin-bottom: 25px;
-        }
-
-        nav a {
-            color: #1f2937;
-            text-decoration: none;
-            margin-right: 8px;
-            font-size: 14px;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #3b82f6;
-        }
-
-        hr {
-            border: none;
-            border-top: 1px solid #d1d5db;
-            margin-bottom: 25px;
-        }
-
-        /* Contact Area */
-        .contact-card {
-            width: 100%;
-            max-width: 650px;
-            padding: 28px;
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
-        }
-
-        .contact-card h2 {
-            margin-bottom: 8px;
-            font-size: 24px;
-        }
-
-        .contact-card p {
-            margin-bottom: 25px;
-            color: #6b7280;
-            font-size: 14px;
-        }
-
-        /* Form */
-        .form-group {
-            margin-bottom: 18px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        input,
-        select,
-        textarea {
-            width: 100%;
-            padding: 12px 14px;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            outline: none;
-            background: #ffffff;
-            color: #1f2937;
-            font-size: 14px;
-            transition: 0.25s ease;
-        }
-
-        input::placeholder,
-        textarea::placeholder {
-            color: #9ca3af;
-        }
-
-        input:focus,
-        select:focus,
-        textarea:focus {
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.12);
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        /* Gender */
-        .gender-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-        }
-
-        .gender-options label {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-weight: normal;
-            margin: 0;
-            cursor: pointer;
-        }
-
-        .gender-options input {
-            width: auto;
-            accent-color: #3b82f6;
-        }
-
-        /* Buttons */
-        .buttons {
-            display: flex;
-            gap: 10px;
-            margin-top: 25px;
-        }
-
-        button {
-            padding: 11px 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: bold;
-            transition: 0.25s ease;
-        }
-
-        .send-btn {
-            background: #3b82f6;
-            color: #ffffff;
-        }
-
-        .clear-btn {
-            background: #e5e7eb;
-            color: #1f2937;
-        }
-
-        button:hover {
-            transform: translateY(-1px);
-            opacity: 0.9;
-        }
-
-        button:active {
-            transform: scale(0.98);
-        }
-
-        /* Mobile */
-        @media (max-width: 600px) {
-
-            body {
-                padding: 20px 15px;
-            }
-
-            header h1 {
-                font-size: 27px;
-            }
-
-            nav {
-                line-height: 2;
-            }
-
-            .contact-card {
-                padding: 20px;
-            }
-
-            .buttons {
-                flex-direction: column;
-            }
-
-            button {
-                width: 100%;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-    <header>
+    <h1>Contact Me</h1>
 
-        <h1>Contact Me</h1>
-
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">About Me</a> |
-            <a href="hobbies.html">Hobbies</a> |
-            <a href="favorites.html">Favorites</a> |
-            <a href="goals.html">Goals</a> |
-            <a href="contact.html">Contact Me</a>
-        </nav>
-
-    </header>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About Me</a> |
+        <a href="hobbies.html">Hobbies</a> |
+        <a href="favorites.html">Favorites</a> |
+        <a href="goals.html">Goals</a> |
+        <a href="contact.html">Contact Me</a>
+    </nav>
 
     <hr>
 
-    <main class="contact-card">
+    <form id="contact-form">
 
-        <h2>Let's Connect</h2>
+        <!-- Name -->
+        <label for="name">Full Name:</label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+        >
 
-        <p>
-            Fill out the form below and send me a message.
-        </p>
+        <br><br>
 
-        <form id="contact-form">
+        <!-- Gmail -->
+        <label for="email">Gmail:</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your Gmail"
+            required
+        >
 
-            <!-- Name -->
-            <div class="form-group">
+        <br><br>
 
-                <label for="name">Full Name:</label>
+        <!-- Gender -->
+        <label>Gender:</label>
+        <br>
 
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Enter your name"
-                    required
-                >
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
 
-            </div>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
 
-            <!-- Gmail -->
-            <div class="form-group">
+        <input type="radio" id="gay" name="gender" value="Gay">
+        <label for="gay">Gay</label>
 
-                <label for="email">Gmail:</label>
+        <input type="radio" id="lesbian" name="gender" value="Lesbian">
+        <label for="lesbian">Lesbian</label>
 
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter your Gmail"
-                    required
-                >
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label>
 
-            </div>
+        <br><br>
 
-            <!-- Gender -->
-            <div class="form-group">
+        <!-- Strand -->
+        <label for="strand">Strand:</label>
 
-                <label>Gender:</label>
+        <select id="strand" name="strand" required>
+            <option value="">Select Strand</option>
+            <option value="ICT">ICT</option>
+            <option value="STEM">STEM</option>
+            <option value="ABM">ABM</option>
+            <option value="GAS">GAS</option>
+            <option value="HUMSS">HUMSS</option>
+        </select>
 
-                <div class="gender-options">
+        <br><br>
 
-                    <label>
-                        <input type="radio" name="gender" value="Male" required>
-                        Male
-                    </label>
+        <!-- Message -->
+        <label for="message">Message:</label>
+        <br>
 
-                    <label>
-                        <input type="radio" name="gender" value="Female">
-                        Female
-                    </label>
+        <textarea
+            id="message"
+            name="message"
+            rows="5"
+            cols="50"
+            placeholder="Type your message here..."
+            required
+        ></textarea>
 
-                    <label>
-                        <input type="radio" name="gender" value="Gay">
-                        Gay
-                    </label>
+        <br><br>
 
-                    <label>
-                        <input type="radio" name="gender" value="Lesbian">
-                        Lesbian
-                    </label>
+        <button type="submit">Send Message</button>
+        <button type="reset">Clear Form</button>
 
-                    <label>
-                        <input type="radio" name="gender" value="Other">
-                        Other
-                    </label>
-
-                </div>
-
-            </div>
-
-            <!-- Strand -->
-            <div class="form-group">
-
-                <label for="strand">Strand:</label>
-
-                <select id="strand" name="strand" required>
-
-                    <option value="">Select Strand</option>
-                    <option value="ICT">ICT</option>
-                    <option value="STEM">STEM</option>
-                    <option value="ABM">ABM</option>
-                    <option value="GAS">GAS</option>
-                    <option value="HUMSS">HUMSS</option>
-
-                </select>
-
-            </div>
-
-            <!-- Message -->
-            <div class="form-group">
-
-                <label for="message">Message:</label>
-
-                <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Type your message here..."
-                    required
-                ></textarea>
-
-            </div>
-
-            <!-- Buttons -->
-            <div class="buttons">
-
-                <button type="submit" class="send-btn">
-                    Send Message
-                </button>
-
-                <button type="reset" class="clear-btn">
-                    Clear Form
-                </button>
-
-            </div>
-
-        </form>
-
-    </main>
+    </form>
 
     <script>
         document.getElementById("contact-form").addEventListener("submit", function(event) {
@@ -391,4 +143,4 @@
 
 </body>
 
-</html>                         
+</html>                
