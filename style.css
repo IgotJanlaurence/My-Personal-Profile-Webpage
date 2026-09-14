@@ -6,4 +6,14 @@ h1 {
     text-align: center;
 }
 
+.profile-info {
+    color: blue;
+}
 
+.section-title {
+    font-weigth: bold;
+}
+
+.nav-link{
+    text-align: center;
+}
