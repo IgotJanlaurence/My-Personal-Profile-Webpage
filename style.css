@@ -18,6 +18,11 @@ h1 {
     text-align: center;
 }
 
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
 #main-header {
     text-align; center;
 }
