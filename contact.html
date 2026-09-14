@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Me - Jan Laurence Igot</title>
   
-  <!-- External CSS Implementation (15 points) -->
+  <!-- External CSS Link -->
   <link rel="stylesheet" href="style.css">
 
   <!-- EmailJS Library -->
@@ -16,10 +16,10 @@
     })();
   </script>
 </head>
-<body id="main-body">
+<body>
 
-  <nav id="navbar">
-    <a class="nav-link bold-text" href="index.html">Introductions</a> |
+  <nav>
+    <a class="nav-link" href="index.html">Introductions</a> |
     <a class="nav-link" href="about.html">About Me</a> |
     <a class="nav-link" href="hobbies.html">My Hobbies</a> |
     <a class="nav-link" href="favorites.html">My Favorites</a> |
@@ -27,25 +27,31 @@
     <a class="nav-link highlight" href="contact.html">Contact Me</a>
   </nav>
 
-  <h1 class="main-header center-text">Contact Me</h1>
+  <!-- ID Selector: #main-header -->
+  <h1 id="main-header">Contact Me</h1>
   <hr>
+
+  <!-- ID Selector: #about-section & Multiple Classes: section-title profile-info -->
+  <div id="about-section">
+    <p class="section-title profile-info">Please fill out the form below to send me a message.</p>
+  </div>
 
   <form id="contact-form">
 
     <!-- Name -->
-    <label for="name" class="bold-text">Full Name:</label><br>
+    <label for="name" class="section-title">Full Name:</label><br>
     <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
     <br><br>
 
     <!-- Gmail -->
-    <label for="email" class="bold-text">Gmail:</label><br>
+    <label for="email" class="section-title">Gmail:</label><br>
     <input type="email" id="email" name="email" placeholder="Enter your Gmail" required>
 
     <br><br>
 
     <!-- Gender -->
-    <label class="bold-text">Gender:</label><br>
+    <label class="section-title">Gender:</label><br>
     <input type="radio" id="male" name="gender" value="Male" required>
     <label for="male">Male</label>
 
@@ -64,7 +70,7 @@
     <br><br>
 
     <!-- Skills -->
-    <label class="bold-text">Skills:</label><br>
+    <label class="section-title">Skills:</label><br>
     <input type="checkbox" id="html" name="skills" value="HTML">
     <label for="html">HTML</label>
 
@@ -77,7 +83,7 @@
     <br><br>
 
     <!-- Strand -->
-    <label for="strand" class="bold-text">Strand:</label><br>
+    <label for="strand" class="section-title">Strand:</label><br>
     <select id="strand" name="strand" required>
       <option value="">Select Strand</option>
       <option value="ICT">ICT</option>
@@ -90,13 +96,13 @@
     <br><br>
 
     <!-- Message -->
-    <label for="message" class="bold-text">Message:</label><br>
+    <label for="message" class="section-title">Message:</label><br>
     <textarea id="message" name="message" rows="5" cols="50" placeholder="Type your message here..." required></textarea>
 
     <br><br>
 
-    <button type="submit" class="btn btn-submit">Send Message</button>
-    <button type="reset" class="btn">Clear Form</button>
+    <button type="submit">Send Message</button>
+    <button type="reset">Clear Form</button>
 
   </form>
 
