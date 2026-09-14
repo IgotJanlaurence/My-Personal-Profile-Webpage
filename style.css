@@ -1,5 +1,5 @@
 body {
-    color: black'
+    color: black;
 }
 
 h1 {
@@ -18,4 +18,10 @@ h1 {
     text-align: center;
 }
 
+#main-header {
+    text-align; center;
+}
 
+#about-section{
+    background-color: lightgray;
+}
