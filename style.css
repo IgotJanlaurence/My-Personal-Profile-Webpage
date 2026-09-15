@@ -49,22 +49,9 @@ h1 {
 }
 
 
-
-
-
-nav a, a {
-  color: #ffffff;            
-  background-color: transparent; 
-  text-decoration: none;    
-  padding: 8px 12px;          
-  font-weight: bold;
-  font-family: sans-serif;
-  transition: color 0.2s ease;
+p {
+font-size: 18px;
+    color: orange;
 }
 
-
-nav a:hover, a:hover {
-  color: #007bff;             
-  text-decoration: underline; 
-}
 
