@@ -1,6 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
-    color: #e8b015;
+    color: blue;
 }
 
 h1 {
@@ -30,7 +29,7 @@ h1 {
 }
 
 .highlight {
-    background-color: yellow;
+    background-color: red;
     font-weight: bold;
 }
 
@@ -40,7 +39,7 @@ h1 {
 }
 
 #main-header {
-    text-align; center;
+    text-align: center;
 }
 
 #about-section{
