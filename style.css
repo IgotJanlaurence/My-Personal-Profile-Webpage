@@ -47,3 +47,24 @@ h1 {
     background-color: lightgray;
     padding: 20px;
 }
+
+
+
+
+
+nav a, a {
+  color: #ffffff;            
+  background-color: transparent; 
+  text-decoration: none;    
+  padding: 8px 12px;          
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: color 0.2s ease;
+}
+
+
+nav a:hover, a:hover {
+  color: #007bff;             
+  text-decoration: underline; 
+}
+
