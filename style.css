@@ -1,5 +1,6 @@
 body {
-    color: black;
+    font-family: Arial, sans-serif;
+    color: #333333;
 }
 
 h1 {
@@ -8,10 +9,20 @@ h1 {
 
 .profile-info {
     color: blue;
+    font-size: 16px;
 }
 
 .section-title {
     font-weight: bold;
+}
+
+.table-style {
+    text-align: bold;
+    width: 100%;
+}
+
+.primary {
+    background-color: lightgray;
 }
 
 .nav-link{
@@ -19,8 +30,13 @@ h1 {
 }
 
 .highlight {
-    background-color:blue;
+    background-color:green;
     font-weight: bold;
+}
+
+#info-table {
+    border-collapse: collapse;
+    margin-top: 10px;
 }
 
 #main-header {
@@ -29,4 +45,5 @@ h1 {
 
 #about-section{
     background-color: lightgray;
+    padding: 20px;
 }
