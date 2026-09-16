@@ -36,3 +36,26 @@ p {
 .profile-info.center-text {
     text-align: center;
 }
+
+
+
+/* TABLE */
+.table-style {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: white;
+  color: black;
+}
+
+.table-style th,
+.table-style td {
+  border: 2px solid black;
+  padding: 12px;
+  text-align: left;
+}
+
+.table-header {
+  background-color: #1e3a8a;
+  color: white;
+}
