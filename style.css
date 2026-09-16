@@ -1,57 +1,38 @@
-body {
-    color: #000000;
+
+    body {
+    color: black;
+    background-color: lightblue;
 }
 
 h1 {
     text-align: center;
+    color: black;
+}
+
+p {
+    color: black;
 }
 
 .profile-info {
-    color: blue;
-    font-size: 16px;
+    background-color: lightgray;
 }
 
 .section-title {
     font-weight: bold;
 }
 
-.table-style {
-    text-align: black;
-    width: 100%;
-}
-
-.primary {
-    background-color: lightgray;
-}
-
-.nav-link{
+.center-text {
     text-align: center;
 }
 
-.highlight {
-    background-color: red;
-    font-weight: bold;
-}
-
-#info-table {
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-#main-header {
-    text-align: center;
-    color: #000000;
-}
-
-#about-section{
+#about {
     background-color: lightgray;
-    padding: 20px;
 }
 
-
-p {
-font-size: 18px;
-    color: orange;
+#contact {
+    background-color: lightblue;
 }
 
-
+.profile-info.center-text {
+    text-align: center;
+}
