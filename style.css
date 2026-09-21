@@ -1,5 +1,8 @@
 
-    body {
+    /* ==========================================================================
+   1. GLOBAL STYLES & BODY
+   ========================================================================== */
+body {
     color: black;
     background-color: lightblue;
     font-family: Arial, sans-serif;   
@@ -9,9 +12,31 @@
     padding: 0;
 }
 
+/* ==========================================================================
+   2. NAVIGATION BAR & LINKS
+   ========================================================================== */
+nav {
+    background-color: #1e3a8a;
+    padding: 12px;
+    text-align: center;
+}
 
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   3. HEADINGS & TEXT PROPERTIES
+   ========================================================================== */
 h1 {
-    text-align: center;             
+    text-align: center;              
     color: white;                    
     font-family: Georgia, serif;      
     font-size: 36px;                  
@@ -19,14 +44,13 @@ h1 {
     text-transform: uppercase;        
     letter-spacing: 2px;             
     
-   
     background: linear-gradient(to right, #1e3a8a, #7e22ce);
     padding: 20px;
     margin: 0;
 }
 
 p {
-    color: #333333;                  
+    color: #333333;                   
 }
 
 .section-title {
@@ -40,7 +64,9 @@ p {
     text-align: center;
 }
 
-
+/* ==========================================================================
+   4. SECTIONS, OPACITY & MEDIA
+   ========================================================================== */
 .profile-info {
     background-color: lightgray;
     color: black;
@@ -48,8 +74,6 @@ p {
     line-height: 1.6;
     padding: 15px;
     margin: 10px 0;
-    
-   
     opacity: 0.95;                    
 }
 
@@ -67,7 +91,21 @@ p {
     padding: 15px;
 }
 
+video {
+    display: block;
+    max-width: 100%;
+    margin: 15px 0;
+    border: 2px solid #1e3a8a;
+}
 
+.hobby-list {
+    margin: 15px 20px;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   5. TABLE STYLES
+   ========================================================================== */
 .table-style {
     width: 100%;
     border-collapse: collapse;
@@ -85,5 +123,5 @@ p {
 
 .table-header {
     background-color: #1e3a8a;
-    color: white;
+    color: white;    
 }
