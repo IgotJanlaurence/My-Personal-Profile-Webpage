@@ -2,66 +2,88 @@
     body {
     color: black;
     background-color: lightblue;
+    font-family: Arial, sans-serif;   
+    font-size: 16px;                  
+    line-height: 1.6;                 
+    margin: 0;
+    padding: 0;
 }
 
+
 h1 {
-    text-align: center;
-    color: black;
+    text-align: center;             
+    color: white;                    
+    font-family: Georgia, serif;      
+    font-size: 36px;                  
+    font-weight: bold;                
+    text-transform: uppercase;        
+    letter-spacing: 2px;             
+    
+   
+    background: linear-gradient(to right, #1e3a8a, #7e22ce);
+    padding: 20px;
+    margin: 0;
 }
 
 p {
-    color: black;
-}
-
-.profile-info {
-    background-color: lightgray;
+    color: #333333;                  
 }
 
 .section-title {
     font-weight: bold;
+    font-family: Georgia, serif;
+    text-transform: capitalize;       
+    letter-spacing: 1px;
 }
 
 .center-text {
     text-align: center;
 }
 
-#about {
-    background-color: lightgray;
-}
 
-#contact {
-    background-color: lightblue;
+.profile-info {
+    background-color: lightgray;
+    color: black;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 15px;
+    margin: 10px 0;
+    
+   
+    opacity: 0.95;                    
 }
 
 .profile-info.center-text {
     text-align: center;
 }
 
+#about {
+    background-color: lightgray;
+    padding: 15px;
+}
+
+#contact {
+    background: radial-gradient(white, lightblue);
+    padding: 15px;
+}
 
 
-/* TABLE */
 .table-style {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  background-color: white;
-  color: black;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    color: black;
 }
 
 .table-style th,
 .table-style td {
-  border: 2px solid black;
-  padding: 12px;
-  text-align: left;
+    border: 2px solid black;
+    padding: 12px;
+    text-align: left;
 }
 
 .table-header {
-  background-color: #1e3a8a;
-  color: white;
-}
-
-.profile-info {
-  color: black;
-  font-size: 16px;
-  line-height: 1.6;
+    background-color: #1e3a8a;
+    color: white;
 }
