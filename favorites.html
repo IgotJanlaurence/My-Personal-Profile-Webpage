@@ -10,13 +10,13 @@
 
 <body>
 
-    <nav>
+  <nav>
     <a class="nav-link highlight" href="index.html">Introductions</a> |
     <a class="nav-link highlight" href="about.html">About Me</a> |
     <a class="nav-link highlight" href="hobbies.html">My Hobbies</a> |
     <a class="nav-link highlight" href="favorites.html">My Favorites</a> |
     <a class="nav-link highlight" href="goals.html">My Goals</a> |
-    <a class="nav-link highlight" href="contact.html">Contact Me</a> |
+    <a class="nav-link highlight" href="contact.html">Contact Me</a>
   </nav>
 
   <main>
@@ -31,12 +31,13 @@
         Below are my top five favorite foods:
       </p>
 
+      <!-- Fixed: Removed class="profile-info" from <li> tags for clean list formatting -->
       <ol type="A">
-        <li class="profile-info">Chicken Adobo</li>
-        <li class="profile-info">Fried Chicken</li>
-        <li class="profile-info">Pizza</li>
-        <li class="profile-info">Spaghetti</li>
-        <li class="profile-info">Burger</li>
+        <li>Chicken Adobo</li>
+        <li>Fried Chicken</li>
+        <li>Pizza</li>
+        <li>Spaghetti</li>
+        <li>Burger</li>
       </ol>
 
     </section>
@@ -66,8 +67,7 @@
       </audio>
 
       <p class="profile-info">
-        This audio represents one of my favorite songs that helps me
-        relax and stay motivated.
+        This audio represents one of my favorite songs, "Shinunoga E-Wa" by Fujii Kaze, which helps me relax and stay motivated while coding.
       </p>
 
     </section>
@@ -78,52 +78,54 @@
       <h2 class="section-title">Favorite Food Summary</h2>
 
       <table class="table-style">
+        <thead>
+          <tr>
+            <th class="table-header">Favorite Food</th>
+            <th class="table-header">Why I Like It</th>
+          </tr>
+        </thead>
 
-        <tr>
-          <th class="table-header">Favorite Food</th>
-          <th class="table-header">Why I Like It</th>
-        </tr>
+        <tbody>
+          <tr>
+            <td><b>Chicken Adobo</b></td>
+            <td>
+              It has a rich and delicious flavor that I never get tired
+              of eating.
+            </td>
+          </tr>
 
-        <tr>
-          <td>Chicken Adobo</td>
-          <td>
-            It has a rich and delicious flavor that I never get tired
-            of eating.
-          </td>
-        </tr>
+          <tr>
+            <td><b>Fried Chicken</b></td>
+            <td>
+              Crispy on the outside, juicy on the inside, and perfect
+              for any meal.
+            </td>
+          </tr>
 
-        <tr>
-          <td>Fried Chicken</td>
-          <td>
-            Crispy on the outside, juicy on the inside, and perfect
-            for any meal.
-          </td>
-        </tr>
+          <tr>
+            <td><b>Pizza</b></td>
+            <td>
+              I enjoy its cheesy taste and the variety of toppings
+              to choose from.
+            </td>
+          </tr>
 
-        <tr>
-          <td>Pizza</td>
-          <td>
-            I enjoy its cheesy taste and the variety of toppings
-            to choose from.
-          </td>
-        </tr>
+          <tr>
+            <td><b>Spaghetti</b></td>
+            <td>
+              Its sweet and savory sauce makes it one of my favorite
+              comfort foods.
+            </td>
+          </tr>
 
-        <tr>
-          <td>Spaghetti</td>
-          <td>
-            Its sweet and savory sauce makes it one of my favorite
-            comfort foods.
-          </td>
-        </tr>
-
-        <tr>
-          <td>Burger</td>
-          <td>
-            It's a quick, tasty meal that gives me energy during
-            a busy day.
-          </td>
-        </tr>
-
+          <tr>
+            <td><b>Burger</b></td>
+            <td>
+              It's a quick, tasty meal that gives me energy during
+              a busy day.
+            </td>
+          </tr>
+        </tbody>
       </table>
 
     </section>
