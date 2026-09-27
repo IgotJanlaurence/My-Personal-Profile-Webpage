@@ -27,9 +27,8 @@
     <a class="nav-link highlight" href="hobbies.html">My Hobbies</a> |
     <a class="nav-link highlight" href="favorites.html">My Favorites</a> |
     <a class="nav-link highlight" href="goals.html">My Goals</a> |
-    <a class="nav-link highlight" href="contact.html">Contact Me</a> |
+    <a class="nav-link highlight" href="contact.html">Contact Me</a>
   </nav>
-
 
   <main>
 
@@ -39,14 +38,15 @@
 
       <hr>
 
-      <p class="section-title profile-info">
+      <!-- Fixed: Removed extra section-title class for clean text alignment -->
+      <p class="profile-info">
         Please fill out the form below to send me a message.
       </p>
 
     </section>
 
-
-    <section class="contact-section">
+    <!-- Fixed: Added id="contact" to connect with style.css -->
+    <section class="contact-section" id="contact">
 
       <form id="contact-form">
 
@@ -97,12 +97,6 @@
 
             <input type="radio" id="female" name="gender" value="Female">
             <label for="female">Female</label>
-
-            <input type="radio" id="gay" name="gender" value="Gay">
-            <label for="gay">Gay</label>
-
-            <input type="radio" id="lesbian" name="gender" value="Lesbian">
-            <label for="lesbian">Lesbian</label>
 
             <input type="radio" id="other" name="gender" value="Other">
             <label for="other">Other</label>
