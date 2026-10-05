@@ -1,5 +1,6 @@
 
- body {
+ 
+body {
     color: black;
     background-color: lightblue;
     font-family: Arial, sans-serif;
@@ -14,17 +15,41 @@ nav {
     background-color: #1e3a8a;
     padding: 12px;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100; 
 }
 
-.nav-link {
+
+nav ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+
+a:link {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    margin: 0 5px;
 }
 
-.nav-link:hover {
+a:visited {
+    color: #e0e7ff;
+}
+
+a:hover {
+    color: #facc15;
     text-decoration: underline;
+}
+
+a:active {
+    color: orange;
 }
 
 
@@ -36,7 +61,6 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
-   
     background: linear-gradient(to right, #1e3a8a, #7e22ce);
     padding: 20px;
     margin: 0;
@@ -63,27 +87,65 @@ p {
     color: black;
     font-size: 16px;
     line-height: 1.6;
-    padding: 15px;
-    margin: 10px 0;
-    
-    opacity: 0.95;
-}
-
-.profile-info.center-text {
-    text-align: center;
+    padding: 20px;        
+    margin: 15px auto;    
+    width: 90%;          
+    border: 2px solid #1e3a8a; 
+    opacity: 0.95;       
 }
 
 #about {
     background-color: lightgray;
     padding: 15px;
+    margin: 15px 0;
 }
-
 
 #contact {
     background: radial-gradient(white, lightblue);
-    padding: 15px;
+    padding: 20px;
+    margin: 15px 0;
 }
 
+
+.float-image {
+    float: left;        
+    margin-right: 15px;
+    margin-bottom: 10px;
+    width: 150px;
+    height: 150px;
+    border: 2px solid #1e3a8a;
+}
+
+
+.card-container {
+    position: relative;
+    height: 120px;
+    margin: 20px 0;
+}
+
+.badge-one {
+    position: absolute;  
+    top: 10px;
+    left: 10px;
+    z-index: 1;         
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px;
+}
+
+.badge-two {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    z-index: 2;         
+    background-color: #7e22ce;
+    color: white;
+    padding: 10px;
+}
+
+.clear-fix {
+    clear: both;       
+}
 
 video, audio, img {
     display: block;
@@ -92,10 +154,17 @@ video, audio, img {
     border: 2px solid #1e3a8a;
 }
 
-.hobby-list {
-    margin: 15px 20px;
-    line-height: 1.8;
+/* List Styling */
+ul.custom-list {
+    list-style-type: circle;
+    margin: 15px 25px;
 }
+
+ol.custom-list {
+    list-style-type: decimal;
+    margin: 15px 25px;
+}
+
 
 .table-style {
     width: 100%;
@@ -117,29 +186,25 @@ video, audio, img {
     color: white;
 }
 
-
 input[type="text"],
 input[type="email"],
 select,
 textarea {
     width: 100%;
     padding: 8px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    border: 1px solid #1e3a8a;
     margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #1e3a8a;
+    font-family: Arial, sans-serif;
 }
 
 button {
     background-color: #1e3a8a;
     color: white;
-    font-family: Arial, sans-serif;
-    font-size: 15px;
     font-weight: bold;
     padding: 10px 18px;
     border: none;
     cursor: pointer;
-    margin-right: 5px;
 }
 
 button:hover {
