@@ -1,7 +1,7 @@
 
  
 /* ==========================================
-   1. GLOBAL STYLES
+   1. GLOBAL STYLES (Original ni Sir Deson)
    ========================================== */
 body {
     color: black;
@@ -13,9 +13,6 @@ body {
     padding: 0;
 }
 
-/* ==========================================
-   2. NAVIGATION STYLES
-   ========================================== */
 nav {
     background-color: #1e3a8a;
     padding: 12px;
@@ -36,9 +33,7 @@ nav li {
     margin: 0 10px;
 }
 
-/* ==========================================
-   3. LINK STATES (Pseudo-Classes)
-   ========================================== */
+/* Link States (Pseudo-classes) */
 a:link {
     color: white;
     text-decoration: none;
@@ -58,9 +53,6 @@ a:active {
     color: orange;
 }
 
-/* ==========================================
-   4. TYPOGRAPHY & HEADINGS
-   ========================================== */
 h1 {
     text-align: center;
     color: white;
@@ -89,9 +81,6 @@ p {
     text-align: center;
 }
 
-/* ==========================================
-   5. SECTIONS & CONTAINERS
-   ========================================== */
 .profile-info {
     background-color: lightgray;
     color: black;
@@ -116,9 +105,6 @@ p {
     margin: 15px 0;
 }
 
-/* ==========================================
-   6. MEDIA, IMAGES & FLOATS
-   ========================================== */
 .float-image {
     float: left;         
     margin-right: 15px;
@@ -128,81 +114,6 @@ p {
     border: 2px solid #1e3a8a;
 }
 
-video, audio, img {
-    display: block;
-    max-width: 100%;
-    margin: 15px auto;
-    border: 2px solid #1e3a8a;
-}
-
-.clear-fix {
-    clear: both;         
-}
-
-/* ==========================================
-   7. CSS IMAGE GALLERY (Lesson 2.3)
-   ========================================== */
-.gallery {
-    text-align: center;
-    margin: 25px 0;
-    padding: 15px;
-    background-color: #f8fafc;
-    border: 2px dashed #1e3a8a;
-}
-
-.gallery-item {
-    display: inline-block;
-    background-color: white;
-    border: 2px solid #1e3a8a;
-    padding: 10px;
-    margin: 12px;
-    vertical-align: top;
-    position: relative; /* Kinahanglan para sa pseudo-elements */
-    border-radius: 6px;
-    transition: border-color 0.3s ease;
-}
-
-.gallery-item img {
-    width: 200px;
-    height: 150px;
-    object-fit: cover; /* Gitul-id ang sizing para dili ma-stretch */
-    display: block;
-    margin: 0 auto;
-    border: 1px solid #cbd5e1;
-}
-
-.gallery-item p {
-    text-align: center;
-    font-weight: bold;
-    color: #1e3a8a;
-    margin-top: 10px;
-    margin-bottom: 0;
-}
-
-/* Gallery Hover States & Pseudo-Elements */
-.gallery-item:hover {
-    border-color: #7e22ce;
-    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
-}
-
-.gallery-item img:hover {
-    opacity: 0.85;
-}
-
-.gallery-item::before {
-    content: "★ ";
-    color: #facc15;
-    font-weight: bold;
-}
-
-.gallery-item:hover::before {
-    content: "✓ ";
-    color: #10b981;
-}
-
-/* ==========================================
-   8. CARD LAYOUT & POSITIONING
-   ========================================== */
 .card-container {
     position: relative;
     height: 120px;
@@ -229,9 +140,17 @@ video, audio, img {
     padding: 10px;
 }
 
-/* ==========================================
-   9. LISTS & TABLES
-   ========================================== */
+.clear-fix {
+    clear: both;         
+}
+
+video, audio, img {
+    display: block;
+    max-width: 100%;
+    margin: 15px auto;
+    border: 2px solid #1e3a8a;
+}
+
 ul.custom-list {
     list-style-type: circle;
     margin: 15px 25px;
@@ -262,9 +181,6 @@ ol.custom-list {
     color: white;
 }
 
-/* ==========================================
-   10. FORMS & INPUT FOCUS STATES
-   ========================================== */
 input[type="text"],
 input[type="email"],
 select,
@@ -275,13 +191,6 @@ textarea {
     margin-bottom: 15px;
     border: 1px solid #1e3a8a;
     font-family: Arial, sans-serif;
-}
-
-/* Form inputs focus state enhancement */
-input:focus, select:focus, textarea:focus {
-    border: 2px solid #7e22ce;
-    background-color: #fefce8;
-    outline: none;
 }
 
 button {
@@ -295,4 +204,46 @@ button {
 
 button:hover {
     background-color: #7e22ce;
+}
+
+/* ==========================================
+   2. LESSON 2.3: CSS IMAGE GALLERY & PSEUDO-ELEMENTS
+   (Eksaktong gisunod gikan sa module ni Sir Deson)
+   ========================================== */
+
+.gallery-item {
+    display: inline-block;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.gallery-item img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.gallery-item p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.gallery-item:hover {
+    border: 3px solid blue;
+}
+
+.gallery-item::before {
+    content: "★ ";
+}
+
+.gallery-item:hover::before {
+    content: "✓";
+}
+
+/* Form inputs focus state gikan sa lesson */
+input:focus {
+    border: 2px solid blue;
+    background-color: lightgray;
+    outline: none;
 }
