@@ -4,14 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Contact Me - Jan Laurence Igot</title>
-
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
   <script>
     (function() {
       emailjs.init("d2qtMLP2W8dQh0WOk");
@@ -21,175 +20,152 @@
 
 <body>
 
-  <!-- NAVIGATION BAR (Structured with UL/LI for Lesson 2.2 CSS) -->
-  <nav>
-    <ul>
-      <li><a href="index.html">Introductions</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="hobbies.html">My Hobbies</a></li>
-      <li><a href="favorites.html">My Favorites</a></li>
-      <li><a href="goals.html">My Goals</a></li>
-      <li><a href="contact.html">Contact Me</a></li>
-    </ul>
+  <!-- Responsive Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Jan Laurence Igot</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Introductions</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="hobbies.html">My Hobbies</a></li>
+          <li class="nav-item"><a class="nav-link" href="favorites.html">My Favorites</a></li>
+          <li class="nav-item"><a class="nav-link" href="goals.html">My Goals</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Me</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <main>
+  <main class="container my-5">
 
-    <section class="profile-section">
-
-      <h1 id="main-header">Contact Me</h1>
-
-      <hr>
-
-      <p class="profile-info">
+    <!-- Header Section -->
+    <section class="text-center mb-4">
+      <h1 id="main-header" class="display-5 fw-bold mb-3">Contact Me</h1>
+      <hr class="w-25 mx-auto mb-3">
+      <p class="lead text-muted">
         Please fill out the form below to send me a message.
       </p>
-
     </section>
 
-    <section class="contact-section" id="contact">
+    <!-- Responsive Contact Form Card -->
+    <section class="row justify-content-center" id="contact">
+      <div class="col-md-8 col-lg-6">
+        <div class="card shadow-sm p-4 bg-light border-0">
+          <form id="contact-form">
 
-      <form id="contact-form">
+            <!-- Full Name -->
+            <div class="mb-3">
+              <label for="name" class="form-label fw-semibold">Full Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              >
+            </div>
 
-        <div class="form-group">
+            <!-- Gmail -->
+            <div class="mb-3">
+              <label for="email" class="form-label fw-semibold">Gmail:</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter your Gmail"
+                required
+              >
+            </div>
 
-          <label for="name" class="section-title">
-            Full Name:
-          </label>
+            <!-- Gender -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold d-block">Gender:</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="male" name="gender" value="Male" required>
+                <label class="form-check-label" for="male">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="female" name="gender" value="Female">
+                <label class="form-check-label" for="female">Female</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="other" name="gender" value="Other">
+                <label class="form-check-label" for="other">Other</label>
+              </div>
+            </div>
 
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your name"
-            required
-          >
+            <!-- Skills -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold d-block">Skills:</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="html" name="skills" value="HTML">
+                <label class="form-check-label" for="html">HTML</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="css" name="skills" value="CSS">
+                <label class="form-check-label" for="css">CSS</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="js" name="skills" value="JavaScript">
+                <label class="form-check-label" for="js">JavaScript</label>
+              </div>
+            </div>
 
+            <!-- Strand -->
+            <div class="mb-3">
+              <label for="strand" class="form-label fw-semibold">Strand:</label>
+              <select class="form-select" id="strand" name="strand" required>
+                <option value="">Select Strand</option>
+                <option value="ICT">ICT</option>
+                <option value="STEM">STEM</option>
+                <option value="ABM">ABM</option>
+                <option value="GAS">GAS</option>
+                <option value="HUMSS">HUMSS</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <div class="mb-4">
+              <label for="message" class="form-label fw-semibold">Message:</label>
+              <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Type your message here..."
+                required
+              ></textarea>
+            </div>
+
+            <!-- Form Buttons -->
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button type="reset" class="btn btn-outline-secondary">
+                Clear Form
+              </button>
+              <button type="submit" class="btn btn-primary px-4">
+                Send Message
+              </button>
+            </div>
+
+          </form>
         </div>
-
-
-        <div class="form-group">
-
-          <label for="email" class="section-title">
-            Gmail:
-          </label>
-
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your Gmail"
-            required
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label class="section-title">
-            Gender:
-          </label>
-
-          <div class="radio-group">
-
-            <input type="radio" id="male" name="gender" value="Male" required>
-            <label for="male">Male</label>
-
-            <input type="radio" id="female" name="gender" value="Female">
-            <label for="female">Female</label>
-
-            <input type="radio" id="other" name="gender" value="Other">
-            <label for="other">Other</label>
-
-          </div>
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label class="section-title">
-            Skills:
-          </label>
-
-          <div class="checkbox-group">
-
-            <input type="checkbox" id="html" name="skills" value="HTML">
-            <label for="html">HTML</label>
-
-            <input type="checkbox" id="css" name="skills" value="CSS">
-            <label for="css">CSS</label>
-
-            <input type="checkbox" id="js" name="skills" value="JavaScript">
-            <label for="js">JavaScript</label>
-
-          </div>
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="strand" class="section-title">
-            Strand:
-          </label>
-
-          <select id="strand" name="strand" required>
-
-            <option value="">Select Strand</option>
-            <option value="ICT">ICT</option>
-            <option value="STEM">STEM</option>
-            <option value="ABM">ABM</option>
-            <option value="GAS">GAS</option>
-            <option value="HUMSS">HUMSS</option>
-
-          </select>
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="message" class="section-title">
-            Message:
-          </label>
-
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            placeholder="Type your message here..."
-            required
-          ></textarea>
-
-        </div>
-
-
-        <div class="form-buttons">
-
-          <button type="submit">
-            Send Message
-          </button>
-
-          <button type="reset">
-            Clear Form
-          </button>
-
-        </div>
-
-      </form>
-
+      </div>
     </section>
 
   </main>
 
+  <!-- Bootstrap 5 JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- EmailJS Form Submission -->
   <script>
-
     document.getElementById("contact-form").addEventListener("submit", function(event) {
-
       event.preventDefault();
 
       emailjs.sendForm(
@@ -197,25 +173,15 @@
         "template_hwwchig",
         this
       )
-
       .then(function() {
-
         alert("Message sent successfully!");
-
         document.getElementById("contact-form").reset();
-
       })
-
       .catch(function(error) {
-
         alert("Message failed to send. Please try again.");
-
         console.error("EmailJS Error:", error);
-
       });
-
     });
-
   </script>
 
 </body>
