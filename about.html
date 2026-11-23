@@ -5,127 +5,138 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me - Jan Laurence Igot</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- NAVIGATION BAR -->
-  <nav>
-    <ul>
-      <li><a href="index.html">Introductions</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="hobbies.html">My Hobbies</a></li>
-      <li><a href="favorites.html">My Favorites</a></li>
-      <li><a href="goals.html">My Goals</a></li>
-      <li><a href="contact.html">Contact Me</a></li>
-    </ul>
+  <!-- Responsive Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Jan Laurence Igot</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Introductions</a></li>
+              <li class="nav-item"><a class="nav-link active" href="about.html">About Me</a></li>
+              <li class="nav-item"><a class="nav-link" href="hobbies.html">My Hobbies</a></li>
+              <li class="nav-item"><a class="nav-link" href="favorites.html">My Favorites</a></li>
+              <li class="nav-item"><a class="nav-link" href="goals.html">My Goals</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
+          </ul>
+      </div>
+    </div>
   </nav>
 
-  <main>
+  <main class="container my-5">
 
-    <section id="about" class="profile-section">
+    <!-- Personal Information Section -->
+    <section id="about" class="mb-5 text-center">
+      <h1 id="main-header" class="display-5 fw-bold mb-3">About Me</h1>
+      <hr class="w-25 mx-auto mb-4">
 
-      <h1 id="main-header">About Me</h1>
-
-      <hr>
-
-      <h2 class="section-title center-text">Personal Information</h2>
-
-      <p class="profile-info">
-        My name is <b>Jan Laurence Igot</b>.<br>
-        I am a <b>Grade 11 ICT Student</b>.<br>
-        I enjoy coding, playing basketball, and listening to music.
-      </p>
-
-    </section>
-
-    <!-- ==========================================
-       LESSON 2.3: CSS IMAGE GALLERY SECTION
-       ========================================== -->
-    <section class="gallery-section">
-
-      <h2 class="section-title center-text">About Me Gallery</h2>
-
-      <div class="gallery">
-        <div class="gallery-item">
-          <img src="a3cda980-d5c3-46c0-9ae6-7ce28dd5495e.jpeg" alt="Jan Laurence Igot profile picture">
-          <p>My Profile</p>
-        </div>
-        <div class="gallery-item">
-          <img src="5eecb52a-95a9-4ebc-84ee-dbaf5f42e2dc.jpeg" alt="My Best Section Onyx">
-          <p>My Section</p>
-        </div>
-        <div class="gallery-item">
-          <img src="199026f0-096b-4941-ac39-acaa3f2e29ff.jpeg" alt="Bounding With Family">
-          <p>My Family</p>
+      <h2 class="section-title mb-3">Personal Information</h2>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm p-4 bg-light border-0">
+            <p class="lead mb-0">
+              My name is <b class="text-primary">Jan Laurence Igot</b>.<br>
+              I am a <b class="text-dark">Grade 11 ICT Student</b>.<br>
+              I enjoy coding, playing basketball, and listening to music.
+            </p>
+          </div>
         </div>
       </div>
-
     </section>
 
-    <section class="table-section">
+    <!-- About Me Gallery Section -->
+    <section class="mb-5">
+      <h2 class="section-title text-center mb-4">About Me Gallery</h2>
 
-      <h2 class="section-title center-text">Personal Information Summary</h2>
-
-      <table class="table-style">
-        <thead>
-          <tr>
-            <th class="table-header" colspan="2">
-              Personal Information Summary
-            </th>
-          </tr>
-          <tr>
-            <th class="table-header">Information</th>
-            <th class="table-header">Details</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>Full Name</td>
-            <td>Jan Laurence Igot</td>
-          </tr>
-
-          <tr>
-            <td>Grade and Strand</td>
-            <td>Grade 11 ICT</td>
-          </tr>
-
-          <tr>
-            <td>Birthday</td>
-            <td>May 7</td>
-          </tr>
-
-          <tr>
-            <td>Hobbies</td>
-            <td>Playing basketball, listening to music, and coding</td>
-          </tr>
-
-          <tr>
-            <td>Dream Job</td>
-            <td>Programmer</td>
-          </tr>
-        </tbody>
-      </table>
-
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm text-center p-3">
+            <img src="a3cda980-d5c3-46c0-9ae6-7ce28dd5495e.jpeg" alt="Jan Laurence Igot profile picture" class="img-fluid rounded mb-2" style="height: 200px; object-fit: cover;">
+            <p class="fw-semibold mt-2">My Profile</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm text-center p-3">
+            <img src="5eecb52a-95a9-4ebc-84ee-dbaf5f42e2dc.jpeg" alt="My Best Section Onyx" class="img-fluid rounded mb-2" style="height: 200px; object-fit: cover;">
+            <p class="fw-semibold mt-2">My Section</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm text-center p-3">
+            <img src="199026f0-096b-4941-ac39-acaa3f2e29ff.jpeg" alt="Bounding With Family" class="img-fluid rounded mb-2" style="height: 200px; object-fit: cover;">
+            <p class="fw-semibold mt-2">My Family</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="profile-section">
+    <!-- Personal Information Summary Table -->
+    <section class="mb-5">
+      <h2 class="section-title text-center mb-4">Personal Information Summary</h2>
 
-      <h2 class="section-title center-text">About Myself</h2>
+      <div class="table-responsive shadow-sm rounded">
+        <table class="table table-striped table-hover align-middle mb-0">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">Information</th>
+              <th scope="col">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fw-semibold">Full Name</td>
+              <td>Jan Laurence Igot</td>
+            </tr>
+            <tr>
+              <td class="fw-semibold">Grade and Strand</td>
+              <td>Grade 11 ICT</td>
+            </tr>
+            <tr>
+              <td class="fw-semibold">Birthday</td>
+              <td>May 7</td>
+            </tr>
+            <tr>
+              <td class="fw-semibold">Hobbies</td>
+              <td>Playing basketball, listening to music, and coding</td>
+            </tr>
+            <tr>
+              <td class="fw-semibold">Dream Job</td>
+              <td>Programmer</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-      <p class="profile-info">
-        I am a hardworking, responsible, and determined student.
-        I enjoy learning new things, especially programming and technology.
-        I always strive to improve my skills and become a better version of myself.
-        I believe that every challenge is an opportunity to learn and grow.
-        My goal is to become a successful programmer in the future.
-      </p>
-
+    <!-- About Myself / Background Section -->
+    <section class="mb-5 text-center">
+      <h2 class="section-title mb-3">About Myself</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p class="lead text-muted lh-lg">
+            I am a hardworking, responsible, and determined student.
+            I enjoy learning new things, especially programming and technology.
+            I always strive to improve my skills and become a better version of myself.
+            I believe that every challenge is an opportunity to learn and grow.
+            My goal is to become a successful programmer in the future.
+          </p>
+        </div>
+      </div>
     </section>
 
   </main>
 
+  <!-- Bootstrap 5 JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
